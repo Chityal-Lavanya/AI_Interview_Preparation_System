@@ -27,3 +27,8 @@ CREATE TABLE Results (
     FOREIGN KEY (question_id) REFERENCES Questions(id)
 );
 
+alter table Users
+rename column name to username;
+
+describe Users;
+
