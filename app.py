@@ -92,5 +92,16 @@ def logout():
     flash("Logged Out Successfully")
     return redirect('/login')
 
+@app.route('/categories')
+def categories():
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM categories")
+    categories = cursor.fetchall()
+
+    return render_template(
+        'categories.html',
+        categories=categories
+    )
+
 if __name__ == '__main__':
     app.run(debug=True)

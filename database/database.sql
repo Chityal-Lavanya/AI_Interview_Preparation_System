@@ -32,3 +32,17 @@ rename column name to username;
 
 describe Users;
 
+CREATE TABLE categories (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(100) NOT NULL
+);
+
+INSERT INTO categories (category_name) VALUES 
+('Python'),
+('Java'),
+('AI/ML'),
+('Web Development'),
+('Database');
+
+DESCRIBE categories;
+
