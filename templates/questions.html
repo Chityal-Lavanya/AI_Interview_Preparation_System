@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questions Page</title>
+    </head>
+    <body>
+        <h1>{{ category }} Questions</h1>
+
+        {% for q in questions %}
+            <p>{{ q.questions }}</p>
+        {% endfor %}
+    </body>
+</html>

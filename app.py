@@ -103,5 +103,24 @@ def categories():
         categories=categories
     )
 
+@app.route('/questions/<category>')
+def questions(category):
+    cursor = db.cursor(dictionary=True)
+
+    cursor.execute(
+        "SELECT * FROM Questions WHERE category=%s",
+        (category,)
+    )
+
+    questions = cursor.fetchall()
+
+    return render_template(
+        'questions.html',
+        questions=questions,
+        category=category
+    )
+def method_name():
+    pass
+
 if __name__ == '__main__':
     app.run(debug=True)

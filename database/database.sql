@@ -46,3 +46,12 @@ INSERT INTO categories (category_name) VALUES
 
 DESCRIBE categories;
 
+INSERT INTO Questions (category, question, difficulty)
+VALUES
+('Python', 'What is a decorator?', 'Medium'),
+('Python', 'What is a list?', 'Easy'),
+('Java', 'What is a JVM?', 'Easy'),
+('Java', 'What is a JDK?', 'Easy');
+
+SELECT * FROM Questions;
+
